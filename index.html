@@ -68,13 +68,13 @@
         }
 
         .container {
-            width: 90vw; /* Sử dụng đơn vị viewport width */
+            width: 95%;
             max-width: 1200px; /* Đảm bảo không quá rộng */
             background-color: rgba(211, 167, 167, 0.121);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
             text-align: center;
-            padding: 5vw; /* Sử dụng đơn vị viewport để padding */
+            padding: 50px;
             position: relative;
             z-index: 1;
         }
@@ -108,7 +108,7 @@
             text-align: center;
             color: #ff4d88;
             font-weight: bold;
-            font-size: 4vw; /* Sử dụng đơn vị viewport cho kích thước chữ */
+            font-size: 1.8rem;
             top: 50%;
             transform: translateY(-50%);
             z-index: 2;
@@ -123,15 +123,15 @@
 
         .message h1 {
             color: #ff4d88;
-            margin-bottom: 20px;
-            font-size: 8vw; /* Sử dụng đơn vị viewport cho kích thước chữ */
+            margin-bottom: 30px;
+            font-size: 4rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .message p {
             color: #333;
-            line-height: 1.5;
-            font-size: 4vw; /* Sử dụng đơn vị viewport cho kích thước chữ */
+            line-height: 1.8;
+            font-size: 1.8rem;
             margin-bottom: 20px;
             max-width: 90%;
             margin-left: auto;
@@ -159,11 +159,11 @@
             background-color: #ff4d88;
             color: white;
             border: none;
-            padding: 2vw 4vw; /* Sử dụng đơn vị viewport cho padding */
+            padding: 20px 40px;
             border-radius: 50px;
             cursor: pointer;
             margin: 15px;
-            font-size: 4vw; /* Sử dụng đơn vị viewport cho kích thước chữ */
+            font-size: 1.5rem;
             transition: all 0.3s;
             font-weight: bold;
             box-shadow: 0 5px 15px rgba(255, 77, 136, 0.4);
@@ -182,58 +182,58 @@
 
         @media (max-width: 1200px) {
             .container {
-                padding: 5vw; /* Giảm padding */
+                padding: 30px;
             }
             .envelope, .sticker {
                 max-width: 500px;
             }
             h1 {
-                font-size: 6vw; /* Giảm kích thước chữ */
+                font-size: 3rem;
             }
             p {
-                font-size: 3vw; /* Giảm kích thước chữ */
+                font-size: 1.5rem;
             }
             .btn {
-                padding: 2vw 4vw; /* Giảm padding */
-                font-size: 3vw; /* Giảm kích thước chữ */
+                padding: 15px 30px;
+                font-size: 1.2rem;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 5vw; /* Giảm padding */
+                padding: 20px;
             }
             .envelope, .sticker {
                 max-width: 400px;
             }
             h1 {
-                font-size: 5vw; /* Giảm kích thước chữ */
+                font-size: 2.5rem;
             }
             p {
-                font-size: 3vw; /* Giảm kích thước chữ */
+                font-size: 1.2rem;
             }
             .btn {
-                padding: 2vw 4vw; /* Giảm padding */
-                font-size: 2.5vw; /* Giảm kích thước chữ */
+                padding: 10px 20px;
+                font-size: 1rem;
             }
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 5vw; /* Giảm padding */
+                padding: 15px;
             }
             .envelope, .sticker {
                 max-width: 300px;
             }
             h1 {
-                font-size: 4vw; /* Giảm kích thước chữ */
+                font-size: 2rem;
             }
             p {
-                font-size: 2.5vw; /* Giảm kích thước chữ */
+                font-size: 1rem;
             }
             .btn {
-                padding: 2vw 4vw; /* Giảm padding */
-                font-size: 2vw; /* Giảm kích thước chữ */
+                padding: 8px 15px;
+                font-size: 0.9rem;
             }
         }
     </style>
