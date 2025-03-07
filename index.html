@@ -14,7 +14,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden; /* Ngăn ngừa tràn ngang */
             position: relative;
         }
 
@@ -68,13 +68,13 @@
         }
 
         .container {
-            width: 95%;
-            max-width: 1400px;
+            width: 90vw; /* Sử dụng đơn vị viewport width */
+            max-width: 1200px; /* Đảm bảo không quá rộng */
             background-color: rgba(211, 167, 167, 0.121);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
             text-align: center;
-            padding: 50px;
+            padding: 5vw; /* Sử dụng đơn vị viewport để padding */
             position: relative;
             z-index: 1;
         }
@@ -108,7 +108,7 @@
             text-align: center;
             color: #ff4d88;
             font-weight: bold;
-            font-size: 1.8rem;
+            font-size: 4vw; /* Sử dụng đơn vị viewport cho kích thước chữ */
             top: 50%;
             transform: translateY(-50%);
             z-index: 2;
@@ -123,15 +123,15 @@
 
         .message h1 {
             color: #ff4d88;
-            margin-bottom: 30px;
-            font-size: 4rem;
+            margin-bottom: 20px;
+            font-size: 8vw; /* Sử dụng đơn vị viewport cho kích thước chữ */
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .message p {
             color: #333;
-            line-height: 1.8;
-            font-size: 1.8rem;
+            line-height: 1.5;
+            font-size: 4vw; /* Sử dụng đơn vị viewport cho kích thước chữ */
             margin-bottom: 20px;
             max-width: 90%;
             margin-left: auto;
@@ -159,11 +159,11 @@
             background-color: #ff4d88;
             color: white;
             border: none;
-            padding: 20px 40px;
+            padding: 2vw 4vw; /* Sử dụng đơn vị viewport cho padding */
             border-radius: 50px;
             cursor: pointer;
             margin: 15px;
-            font-size: 1.5rem;
+            font-size: 4vw; /* Sử dụng đơn vị viewport cho kích thước chữ */
             transition: all 0.3s;
             font-weight: bold;
             box-shadow: 0 5px 15px rgba(255, 77, 136, 0.4);
@@ -182,58 +182,58 @@
 
         @media (max-width: 1200px) {
             .container {
-                padding: 30px;
+                padding: 5vw; /* Giảm padding */
             }
             .envelope, .sticker {
                 max-width: 500px;
             }
             h1 {
-                font-size: 3rem;
+                font-size: 6vw; /* Giảm kích thước chữ */
             }
             p {
-                font-size: 1.5rem;
+                font-size: 3vw; /* Giảm kích thước chữ */
             }
             .btn {
-                padding: 15px 30px;
-                font-size: 1.2rem;
+                padding: 2vw 4vw; /* Giảm padding */
+                font-size: 3vw; /* Giảm kích thước chữ */
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 20px;
+                padding: 5vw; /* Giảm padding */
             }
             .envelope, .sticker {
                 max-width: 400px;
             }
             h1 {
-                font-size: 2.5rem;
+                font-size: 5vw; /* Giảm kích thước chữ */
             }
             p {
-                font-size: 1.2rem;
+                font-size: 3vw; /* Giảm kích thước chữ */
             }
             .btn {
-                padding: 10px 20px;
-                font-size: 1rem;
+                padding: 2vw 4vw; /* Giảm padding */
+                font-size: 2.5vw; /* Giảm kích thước chữ */
             }
         }
 
         @media (max-width: 480px) {
             .container {
-                padding: 15px;
+                padding: 5vw; /* Giảm padding */
             }
             .envelope, .sticker {
                 max-width: 300px;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 4vw; /* Giảm kích thước chữ */
             }
             p {
-                font-size: 1rem;
+                font-size: 2.5vw; /* Giảm kích thước chữ */
             }
             .btn {
-                padding: 8px 15px;
-                font-size: 0.9rem;
+                padding: 2vw 4vw; /* Giảm padding */
+                font-size: 2vw; /* Giảm kích thước chữ */
             }
         }
     </style>
@@ -261,7 +261,6 @@
     </div>
 
     <script>
-        // Hiển thị hiệu ứng hoa lá ngay từ khi trang tải
         document.addEventListener('DOMContentLoaded', () => {
             createFlowers();
         });
@@ -285,13 +284,12 @@
             location.reload();
         });
 
-        // Tạo hiệu ứng hoa lá rơi
         function createFlowers() {
-            for (let i = 0; i < 30; i++) {
-                const flower = document.createElement('div');
+            for (let i = 0; i < 50; i++) {
+                let flower = document.createElement('div');
                 flower.classList.add('flower');
                 flower.style.left = `${Math.random() * 100}%`;
-                flower.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                flower.style.animationDuration = `${Math.random() * 2 + 3}s`;
                 flowersContainer.appendChild(flower);
             }
         }
